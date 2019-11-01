@@ -10,9 +10,9 @@ export const ListOfCategories = () => {
             .then(res => res.json())
             .then(categories => setCategories(categories))
     }, [])
-    const pushContent = () => {
+    const pushContent = (fixed) => {
         return (
-            <List>
+            <List className={fixed ? 'fixed'} >
                 {categories.map(category => {
                     return (
                         <Item key={category.id}>

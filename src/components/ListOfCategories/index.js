@@ -10,17 +10,12 @@ export const ListOfCategories = () => {
             .then(res => res.json())
             .then(categories => setCategories(categories))
     }, [])
-    const pushContent = (fixed) => {
+    const pushContent = fixed => {
         return (
-            <List className={fixed ? 'fixed'} >
+            <List className={fixed ? 'fixed' : ''}>
                 {categories.map(category => {
                     return (
                         <Item key={category.id}>
-                            {/* <Category
-                            emoji={category.emoji}
-                            cover={category.cover}
-                            path={category.path}
-                        /> */}
                             <Category {...category} />
                         </Item>
                     )

@@ -2,9 +2,9 @@ import styled, { css } from 'styled-components'
 import { fadeIn } from '../../styles/animation'
 export const List = styled.ul`
     display: flex;
-    overflow: hidden;
+    overflow-x: scroll;
     width: 100%;
-
+    padding-bottom: 20px;
     ${props =>
         props.fixed &&
         css`
